@@ -41,5 +41,13 @@ SMOTE / pour les données continues. Pour les données catégorielles,  SMOTENC 
 #### b. ADASYN (ADAptive SYNthetic :
 Comme la SMOTE génèrent de nouveaux échantillons par interpolation. Cependant, les échantillons utilisés pour interpoler/générer de nouveaux échantillons synthétiques diffèrent.  En fait, ADASYN se concentre sur la génération d'échantillons à côté des échantillons originaux qui sont mal classés à l'aide d'un classificateur de k-voisins les plus proches (KNN), tandis que l'implémentation de base de SMOTE ne fera aucune distinction entre les échantillons à classer à l'aide de la règle des voisins les plus proches.
 
-#### Combinaison de SMOTE et NearMiss
-Le  suréchantillonnage et le sous-échantillonnage peuvent aussi etre combinés
+#### c. Combinaison de SMOTE et NearMiss
+Le suréchantillonnage et le sous-échantillonnage peuvent aussi être combinés
+
+## Apprentissage sensible aux coûts (scale_pos_weight / class_weight) :
+
+C’est un type d’apprentissage qui prend en compte les coûts d’une mauvaise classification (de la classe minoritaire).
+Au cour de l’apprentissage, on peut attribuer des poids aux observations. le poids de des observations  la classe minoritaire sera plus important. Le principe est de redéfinir la fonction de coût du modèle en tenant compte de ces poids.
+
+
+
