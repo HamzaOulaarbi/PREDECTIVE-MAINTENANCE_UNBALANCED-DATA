@@ -48,6 +48,9 @@ Le suréchantillonnage et le sous-échantillonnage peuvent aussi être combinés
 
 C’est un type d’apprentissage qui prend en compte les coûts d’une mauvaise classification (de la classe minoritaire).
 Au cour de l’apprentissage, on peut attribuer des poids aux observations. le poids de des observations  la classe minoritaire sera plus important. Le principe est de redéfinir la fonction de coût du modèle en tenant compte de ces poids.
-
+Cela est possible en configurant les paramètres suivants
+    - scale_pos_weight  => pour les modèle de boosting  XGBClassifier, Light GBM, Catboost ..
+        => recommandation pour le scale_pos_weight = le ratio des observations négatives par rapport aux positives.
+    - class_weight => pour les autres modèles 
 
 
