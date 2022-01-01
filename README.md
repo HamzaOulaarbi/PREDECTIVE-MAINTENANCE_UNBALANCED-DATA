@@ -41,4 +41,22 @@ Cela est possible en configurant les paramètres suivants:
 	- recommandation pour le scale_pos_weight = le ratio des observations négatives par rapport aux positives.
 - class_weight => pour les autres modèles 
 
+### Conclusion :
+Les scores obtenus avec le modèle XGBClassifier :
+			Accuracy	Recall	Precision	f1_score
+Sans traitement du déséquilibre		XGBClassifier	98,5	65,3	92,5	76,6
+		RandomForestClassifier	98,2	62,7	83,9	71,8
+ Cost-Sensitive Learning 	Class_weight='Balanced'	XGBClassifier	97,8	73,3	68,8	71,0
+		RandomForestClassifier	97,9	49,3	88,1	63,2
+Sous-Échantillonnage	Sous_échantillonnage aléatoire	XGBClassifier	91,9	94,1	90,1	92,1
+		RandomForestClassifier	92,6	97,1	89,2	93,0
+	Sous_échantillonnage avec NearMiss	XGBClassifier	93,4	95,9	92,1	94,0
+		RandomForestClassifier	91,9	94,5	90,8	92,6
+Sur-Échantillonnage 	Sur-Échantillonnage avec SMOTE	XGBClassifier	98,4	99,1	97,7	98,4
+		RandomForestClassifier	97,3	98,3	96,3	97,3
+	Sur-Échantillonnage avec ADASYN	XGBClassifier	98,8	99,2	98,4	98,8
+		RandomForestClassifier	97,2	98,2	96,2	97,2
+Combinaison de SMOTE et NearMiss		XGBClassifier	98,9	99,3	98,6	99,0
+		RandomForestClassifier	97,7	98,6	96,9	97,7
+![image](https://user-images.githubusercontent.com/80227876/147856493-860e7c0b-c1d3-42a2-8c83-15f459957918.png)
 
