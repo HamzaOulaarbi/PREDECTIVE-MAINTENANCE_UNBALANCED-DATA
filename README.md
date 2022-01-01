@@ -24,3 +24,23 @@ Les trois  versions de NearMiss
 - NearMiss-2 (version=2) sélectionne les échantillons positifs pour lesquels la distance moyenne aux N échantillons les plus éloignés de la classe négative est la plus petite.
 - NearMiss-3 (version=3)  est un algorithme en 2 étapes. D'abord, pour chaque échantillon négatif, les M plus proches voisins sont conservés. Ensuite, les échantillons positifs sélectionnés sont ceux pour lesquels la distance moyenne aux N plus proches voisins est la plus grande.
 
+### 2. Sur- Echantillonnage 
+Les techniques de sur-échantillonnage sont utilisées lorsqu'on a un Dataset pas très grand. On peut sur-échantillonner les observations de la classe minoritaire en générant des échantillons par répétition de façon aléatoire ou en utilisant des méthodes comme SMOTE ou ADASYN  qui génèrent des nouveaux échantillons par interpolation : 
+ 
+#### a. SMOTE ( Synthetic Minority Over-Sampling Technique)  
+Consiste à sur-échantillonner en se basant sur les proches voisins de la classe minoritaire.
+	• On choisit une observation de la classe minoritaire et on sélectionne aléatoirement un de ses proches voisins appartenant à la même classe en utilisant la distance euclidienne.
+	• Ensuite, on calcule la différence pour chaque feature et on la multiplie par un nombre aléatoire entre 0 et 1.
+	• Finalement, on ajoute le résultat à l’observation choisie pour obtenir un nouveau point
+
+SMOTE / pour les données continues. Pour les données catégorielles,  SMOTENC (SMOTE Nominal Continous) est la version adaptée.
+##### Faiblesses de la SMOTE :
+	• Ne prend pas en compte les exemples voisins pouvant provenir de la classe majoritaire.
+	• Risque de générer du bruit supplémentaire dans le jeu de données, ce qui pourrait éventuellement biaiser le modèle. 
+
+
+#### b. ADASYN (ADAptive SYNthetic :
+Comme la SMOTE génèrent de nouveaux échantillons par interpolation. Cependant, les échantillons utilisés pour interpoler/générer de nouveaux échantillons synthétiques diffèrent.  En fait, ADASYN se concentre sur la génération d'échantillons à côté des échantillons originaux qui sont mal classés à l'aide d'un classificateur de k-voisins les plus proches (KNN), tandis que l'implémentation de base de SMOTE ne fera aucune distinction entre les échantillons à classer à l'aide de la règle des voisins les plus proches.
+
+#### Combinaison de SMOTE et NearMiss
+Le  suréchantillonnage et le sous-échantillonnage peuvent aussi etre combinés.![image](https://user-images.githubusercontent.com/80227876/147853686-29b5324f-08a9-44f5-9024-ea925fb5aa9c.png)
