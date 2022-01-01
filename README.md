@@ -42,7 +42,10 @@ Cela est possible en configurant les paramètres suivants:
 - class_weight => pour les autres modèles 
 
 ### Conclusion :
+Après exploration de l'ensemble des méthodes citées ci-dessus nous constatons pour notre exemple de maintenance prédictive que:
+- pour le classifier XGBClassifier la méthode du Sur-échantillonnage avec ADASYN donne les meilleures performances
+- Pour le classifier RandomForestClassifier la méthode du Sur-échantillonnage avec SMOTE donne les meilleures performances
 
-![image](https://user-images.githubusercontent.com/80227876/147856619-d2100d0c-1f2d-4d76-b405-76b9c5c43bb1.png)
+![image](https://user-images.githubusercontent.com/80227876/147856775-9d9bebe5-5d63-4880-b704-b1d6c5f1858f.png)
 
 
