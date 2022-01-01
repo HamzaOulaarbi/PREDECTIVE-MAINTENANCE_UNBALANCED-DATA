@@ -20,7 +20,7 @@ Sous-échantillonnage pour réduire la taille de la classe majoritaire et attén
 #### Sous-échantillonnage avec la méthode NearMiss
 NearMiss Consiste à rééchantillonner la classe majoritaire en utilisant les méthodes de voisinage proche afin de ne pas perdre l'information (l'utilité des exemples pour déterminer les limites de décision au sein des différentes classes).
 Les trois  versions de NearMiss 
-		1. NearMiss-1(version=1) :  sélectionne les échantillons positifs pour lesquels la distance moyenne aux N échantillons les plus proches de la classe négative est la plus petite.
-		2. NearMiss-2 (version=2) sélectionne les échantillons positifs pour lesquels la distance moyenne aux N échantillons les plus éloignés de la classe négative est la plus petite.
-		3. NearMiss-3 (version=3)  est un algorithme en 2 étapes. D'abord, pour chaque échantillon négatif, les M plus proches voisins sont conservés. Ensuite, les échantillons positifs sélectionnés sont ceux pour lesquels la distance moyenne aux N plus proches voisins est la plus grande.
+- NearMiss-1(version=1) :  sélectionne les échantillons positifs pour lesquels la distance moyenne aux N échantillons les plus proches de la classe négative est la plus petite.
+- NearMiss-2 (version=2) sélectionne les échantillons positifs pour lesquels la distance moyenne aux N échantillons les plus éloignés de la classe négative est la plus petite.
+- NearMiss-3 (version=3)  est un algorithme en 2 étapes. D'abord, pour chaque échantillon négatif, les M plus proches voisins sont conservés. Ensuite, les échantillons positifs sélectionnés sont ceux pour lesquels la distance moyenne aux N plus proches voisins est la plus grande.
 
