@@ -35,12 +35,11 @@ Consiste à sur-échantillonner en se basant sur les proches voisins de la class
 
 SMOTE / pour les données continues. Pour les données catégorielles,  SMOTENC (SMOTE Nominal Continous) est la version adaptée.
 ##### Faiblesses de la SMOTE :
-	• Ne prend pas en compte les exemples voisins pouvant provenir de la classe majoritaire.
-	• Risque de générer du bruit supplémentaire dans le jeu de données, ce qui pourrait éventuellement biaiser le modèle. 
-
+- Ne prend pas en compte les exemples voisins pouvant provenir de la classe majoritaire.
+- Risque de générer du bruit supplémentaire dans le jeu de données, ce qui pourrait éventuellement biaiser le modèle. 
 
 #### b. ADASYN (ADAptive SYNthetic :
 Comme la SMOTE génèrent de nouveaux échantillons par interpolation. Cependant, les échantillons utilisés pour interpoler/générer de nouveaux échantillons synthétiques diffèrent.  En fait, ADASYN se concentre sur la génération d'échantillons à côté des échantillons originaux qui sont mal classés à l'aide d'un classificateur de k-voisins les plus proches (KNN), tandis que l'implémentation de base de SMOTE ne fera aucune distinction entre les échantillons à classer à l'aide de la règle des voisins les plus proches.
 
 #### Combinaison de SMOTE et NearMiss
-Le  suréchantillonnage et le sous-échantillonnage peuvent aussi etre combinés.![image](https://user-images.githubusercontent.com/80227876/147853686-29b5324f-08a9-44f5-9024-ea925fb5aa9c.png)
+Le  suréchantillonnage et le sous-échantillonnage peuvent aussi etre combinés
