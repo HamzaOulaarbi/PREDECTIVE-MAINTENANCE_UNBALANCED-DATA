@@ -8,4 +8,6 @@ Je présente ici quelques techniques qu'on peut utiliser pour résoudre ce probl
 Les données sont chargées depuis kaggle : Machine Predictive Maintenance Classification | Kaggle
 
 
-![image](https://user-images.githubusercontent.com/80227876/147845767-7ade504c-eee6-4603-9400-f3303dcb6cf5.png)
+Choix de la métrique: 
+Dans notre exemple on s'intéresse particulièrement à la classe panne positif =1, l'objectif étant de minimiser les faux négatifs nous allons contrôler la métrique rappel 'Recall' 
+![image](https://user-images.githubusercontent.com/80227876/147846613-1acbbb7c-05a6-4d5f-ac32-42dfbbb813b1.png)
