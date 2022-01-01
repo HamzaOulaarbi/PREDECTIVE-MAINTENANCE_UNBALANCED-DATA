@@ -31,7 +31,7 @@ les faiblesses de la SMOTE :
 - Risque de générer du bruit supplémentaire dans le jeu de données, ce qui pourrait éventuellement biaiser le modèle. 
 #### 2.b. ADASYN (ADAptive SYNthetic :
 Comme la SMOTE génèrent de nouveaux échantillons par interpolation. Cependant, les échantillons utilisés pour interpoler/générer de nouveaux échantillons synthétiques diffèrent.  En fait, ADASYN se concentre sur la génération d'échantillons à côté des échantillons originaux qui sont mal classés à l'aide d'un classificateur de k-voisins les plus proches (KNN), tandis que l'implémentation de base de SMOTE ne fera aucune distinction entre les échantillons à classer à l'aide de la règle des voisins les plus proches.
-#### c. Combinaison de SMOTE et NearMiss
+### 3. Combinaison de SMOTE et NearMiss
 la combinaison du sur-échantillonnage et du sous-échantillonnage peut aussi apporter des meilleurs performances.
 ## Apprentissage sensible aux coûts (scale_pos_weight / class_weight) :
 C’est un type d’apprentissage qui prend en compte les coûts d’une mauvaise classification (de la classe minoritaire).
