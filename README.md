@@ -57,7 +57,5 @@ Après exploration de l'ensemble des méthodes citées ci-dessus nous constatons
 - La Combinaison'SMOTETomek' est la meilleure technique dans notre exemple de maintenance prédictive.
 - Le plus important dans ce contexte est d’abord de bien choisir la métrique et ensuite de tester de nombreuses techniques avant de retenir la meilleure
 
-![image](https://user-images.githubusercontent.com/80227876/147882196-e7ba6ac3-b266-4af9-8104-b6cd73c5e6d7.png)
-
-
+![image](https://user-images.githubusercontent.com/80227876/147882223-8669e42d-6e18-4eb7-a422-ceb9553f8b0b.png)
 
