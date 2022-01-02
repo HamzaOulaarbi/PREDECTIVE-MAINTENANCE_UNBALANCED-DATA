@@ -46,6 +46,8 @@ Après exploration de l'ensemble des méthodes citées ci-dessus nous constatons
 - pour le classifier XGBClassifier la méthode du Sur-échantillonnage avec ADASYN donne les meilleures performances
 - Pour le classifier RandomForestClassifier la méthode du Sur-échantillonnage avec SMOTE donne les meilleures performances
 
-![image](https://user-images.githubusercontent.com/80227876/147856775-9d9bebe5-5d63-4880-b704-b1d6c5f1858f.png)
+![image](https://user-images.githubusercontent.com/80227876/147868359-186d2ad0-73fc-467b-984b-8207ecbf216d.png)
+
+
 
 
