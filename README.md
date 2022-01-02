@@ -31,8 +31,9 @@ Les faiblesses de la SMOTE :
 - Risque de générer du bruit supplémentaire dans le jeu de données, ce qui pourrait éventuellement biaiser le modèle. 
 #### 2.b. ADASYN (ADAptive SYNthetic :
 Comme la SMOTE génèrent de nouveaux échantillons par interpolation. Cependant, les échantillons utilisés pour interpoler/générer de nouveaux échantillons synthétiques diffèrent.  En fait, ADASYN se concentre sur la génération d'échantillons à côté des échantillons originaux qui sont mal classés à l'aide d'un classificateur de k-voisins les plus proches (KNN), tandis que l'implémentation de base de SMOTE ne fera aucune distinction entre les échantillons à classer à l'aide de la règle des voisins les plus proches.
-### 3. Combinaison de SMOTE et NearMiss
+### 3. Combinaison sur-échantillonnage et  sous-échantillonnage
 la combinaison du sur-échantillonnage et du sous-échantillonnage peut aussi apporter des meilleurs performances.
+- Combinaison de SMOTE et Tomek links 'SMOTETomek'
 ## Apprentissage sensible aux coûts (scale_pos_weight / class_weight) :
 C’est un type d’apprentissage qui prend en compte les coûts d’une mauvaise classification (de la classe minoritaire).
 Au cour de l’apprentissage, on peut attribuer des poids aux observations. le poids des observations la classe minoritaire sera plus important. Le principe est de redéfinir la fonction de coût du modèle en tenant compte de ces poids.
@@ -41,13 +42,21 @@ Cela est possible en configurant les paramètres suivants:
 	- recommandation pour le scale_pos_weight = le ratio des observations négatives par rapport aux positives.
 - class_weight => pour les autres modèles 
 
+### L'ensemble learning 
+Consiste à moyenner les prédictions de différents modèles. Ces modèles sont entrainés sur des sous ensembles de données constitués du même ensemble des observations minoritaire et d’un sous-ensemble des observations majoritaire ( avec à chaque fois le même ratio)
+- Exemples: EasyEnsembleClassifier, BalancedBaggingClassifier,BalancedRandomForestClassifier
+### Utilisation de la One-Class-Classification :
+C'est un apprentissage sur un jeu de données avec une seule classe d’observations. lors du testing, on cherchera à déterminer si une nouvelle observation ressemble à la population d’observations ou si elle peut être considérée comme un outlier. Deux techniques:
+- Exemple : Utilisation de la densité de probabilité pour identifier les outliers, les méthode de frontières telle que le One class SVM, IsolationForest ...
+
 ### Conclusion :
-Après exploration de l'ensemble des méthodes citées ci-dessus nous constatons pour notre exemple de maintenance prédictive que:
-- pour le classifier XGBClassifier la méthode du Sur-échantillonnage avec ADASYN donne les meilleures performances
-- Pour le classifier RandomForestClassifier la méthode du Sur-échantillonnage avec SMOTE donne les meilleures performances
+Après exploration de l'ensemble des méthodes citées ci-dessus nous constatons pour notre exemple de maintenance prédictive que :
+- toutes les techniques apportent une amélioration par rapport à l'entrainement de base
+- la Combinaison'SMOTETomek' est la meilleure technique dans notre exemple de maintenance prédictive.
 
-![image](https://user-images.githubusercontent.com/80227876/147868359-186d2ad0-73fc-467b-984b-8207ecbf216d.png)
+![image](https://user-images.githubusercontent.com/80227876/147871729-613f4c37-8018-4ac4-bc95-bd76995cb625.png)
 
+le plus important dans ce contexte est d’abord de bien choisir la métrique et ensuite de tester de nombreuses techniques avant de retenir la meilleure
 
 
 
