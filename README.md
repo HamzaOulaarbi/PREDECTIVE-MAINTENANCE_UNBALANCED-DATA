@@ -44,14 +44,14 @@ Cela est possible en configurant les paramètres suivants:
 	- recommandation pour le scale_pos_weight = le ratio des observations négatives par rapport aux positives.
 - class_weight => pour les autres modèles 
 
-### L'ensemble learning 
+## L'ensemble learning 
 Consiste à moyenner les prédictions de différents modèles. Ces modèles sont entrainés sur des sous ensembles de données constitués du même ensemble des observations minoritaire et d’un sous-ensemble des observations majoritaire ( avec à chaque fois le même ratio)
 - Exemples: EasyEnsembleClassifier, BalancedBaggingClassifier,BalancedRandomForestClassifier
-### Utilisation de la One-Class-Classification :
+## Utilisation de la One-Class-Classification :
 C'est un apprentissage sur un jeu de données avec une seule classe d’observations. lors du testing, on cherchera à déterminer si une nouvelle observation ressemble à la population d’observations ou si elle peut être considérée comme un outlier. Deux techniques:
 - Exemple : Utilisation de la densité de probabilité pour identifier les outliers, les méthode de frontières telle que le One class SVM, IsolationForest ...
 
-### Conclusion :
+## Conclusion :
 Après exploration de l'ensemble des méthodes citées ci-dessus nous constatons pour notre exemple de maintenance prédictive que :
 - Toutes les techniques apportent une amélioration par rapport à l'entrainement de base
 - La Combinaison'SMOTETomek' est la meilleure technique dans notre exemple de maintenance prédictive.
