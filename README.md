@@ -4,7 +4,7 @@ La maintenance prédictive pour l'industrie 4.0 est une méthode de prévention 
 Le choix de la métrique est plus important surtout lorsque les données ne sont pas équilibrées.
 Dans notre exemple on va s'intéresse particulièrement à la classe positive/minoritaire (target=1). Il nous faudra donc une  métrique qui sera moins influencée par la classe majoritaire. L'objectif étant de minimiser les faux négatifs (les pannes non détectées) nous allons contrôler principalement la métrique rappel 'Recall' et ensuite le F1-score. Nous tracerons aussi la matrice de confusion pour mieux visualiser les résultats.
 
-# DONNEES DESEQUILIBREES
+# DONNEES DESEQUILIBREES _ Classification binaire
 Ce problème de données déséquilibrées est rencontré souvent dans le secteur bancaire, médical ou encore en maintenance prédictive… le risque d'entrainer un modèle avec ce genre de données est de biaiser le modèle et donc de prédire beaucoup de faux négatif.
 
 Je présente ici quelques techniques qu'on peut utiliser pour résoudre ce problème. Ces différents techniques sont explorées dans le cadre d'un exemple de maintenance prédictive.
