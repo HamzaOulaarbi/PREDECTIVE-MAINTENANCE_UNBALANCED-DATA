@@ -48,7 +48,7 @@ Cela est possible en configurant les paramètres suivants:
 Consiste à moyenner les prédictions de différents modèles. Ces modèles sont entrainés sur des sous ensembles de données constitués du même ensemble des observations minoritaire et d’un sous-ensemble des observations majoritaire ( avec à chaque fois le même ratio)
 - Exemples: EasyEnsembleClassifier, BalancedBaggingClassifier,BalancedRandomForestClassifier
 ## Utilisation de la One-Class-Classification :
-C'est un apprentissage sur un jeu de données avec une seule classe d’observations. lors du testing, on cherchera à déterminer si une nouvelle observation ressemble à la population d’observations ou si elle peut être considérée comme un outlier. Deux techniques:
+C'est un apprentissage sur un jeu de données avec une seule classe d’observations. lors du testing, on cherchera à déterminer si une nouvelle observation ressemble à la population d’observations ou si elle peut être considérée comme un outlier:
 - Exemple : Utilisation de la densité de probabilité pour identifier les outliers, les méthode de frontières telle que le One class SVM, IsolationForest ...
 
 ## Conclusion :
