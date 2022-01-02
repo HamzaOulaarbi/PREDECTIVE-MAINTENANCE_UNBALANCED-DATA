@@ -1,7 +1,9 @@
 # MAINTENANCE PREDICTIVE 
 La maintenance prédictive pour l'industrie 4.0 est une méthode de prévention des pannes des machines par l'analyse des données. Elle consiste à développer des modèles de Machine Learning capable de prévoir les pannes avant qu'ils ne se produisent
 # CHOIX DE LA METRIQUE: 
-Dans notre exemple on s'intéresse particulièrement à la classe positive (target=1/panne). l'objectif étant de minimiser les faux négatifs (les pannes non detectées) nous allons donc contrôler principalement la métrique rappel 'Recall'. Le choix de la métrique est plus important lorsque les données ne sont pas équilibrées.
+Le choix de la métrique est plus important surtout lorsque les données ne sont pas équilibrées.
+Dans notre exemple on va s'intéresse particulièrement à la classe positive/minoritaire (target=1). Il nous faudra donc une  métrique qui sera moins influencée par la classe majoritaire. L'objectif étant de minimiser les faux négatifs (les pannes non détectées) nous allons contrôler principalement la métrique rappel 'Recall' et ensuite le F1-score. Nous tracerons aussi la matrice de confusion pour mieux visualiser les résultats.
+
 # DONNEES DESEQUILIBREES
 Ce problème de données déséquilibrées est rencontré souvent dans le secteur bancaire, médical ou encore en maintenance prédictive… le risque d'entrainer un modèle avec ce genre de données est de biaiser le modèle et donc de prédire beaucoup de faux négatif.
 
@@ -51,12 +53,12 @@ C'est un apprentissage sur un jeu de données avec une seule classe d’observat
 
 ### Conclusion :
 Après exploration de l'ensemble des méthodes citées ci-dessus nous constatons pour notre exemple de maintenance prédictive que :
-- toutes les techniques apportent une amélioration par rapport à l'entrainement de base
-- la Combinaison'SMOTETomek' est la meilleure technique dans notre exemple de maintenance prédictive.
+- Toutes les techniques apportent une amélioration par rapport à l'entrainement de base
+- La Combinaison'SMOTETomek' est la meilleure technique dans notre exemple de maintenance prédictive.
+- Le plus important dans ce contexte est d’abord de bien choisir la métrique et ensuite de tester de nombreuses techniques avant de retenir la meilleure
 
 ![image](https://user-images.githubusercontent.com/80227876/147871729-613f4c37-8018-4ac4-bc95-bd76995cb625.png)
 
-le plus important dans ce contexte est d’abord de bien choisir la métrique et ensuite de tester de nombreuses techniques avant de retenir la meilleure
 
 
 
